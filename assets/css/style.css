@@ -1,0 +1,4073 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #5c5c5b;
+    background-color: #f4f1ea;
+    line-height: 28px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1314px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 12px;
+    box-sizing: border-box;
+}
+
+::placeholder {
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+.button {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 20px 50px;
+    color: white;
+    border-radius: 9px;
+    background: #D12525;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    line-height: 1;
+    position: relative;
+    transition: all 500ms ease;
+    z-index: 1;
+}
+
+.button i {
+    margin-right: 10px;
+}
+
+.button::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 9px;
+    transform: scale(0, 0);
+    z-index: -1;
+    transition: all 500ms ease;
+    box-sizing: border-box;
+}
+
+.button:hover::before {
+    transform: scale(1, 1);
+}
+
+a {
+    color: #212121;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.title {
+    position: relative;
+    z-index: 99;
+    margin-bottom: 30px;
+    margin-top: -6px;
+    text-align: left;
+}
+
+.title span {
+    color: #D12525;
+    margin-bottom: 5px;
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.title h2 {
+    font-size: 70px;
+    line-height: 110%;
+    font-weight: 700;
+    color: #212121;
+    text-transform: uppercase;
+}
+
+/*--------------- scroll css start ---------------*/
+.scroll-up {
+    cursor: pointer;
+    display: block;
+    border-radius: 50px;
+    box-shadow: inset 0 0 0 2px #D9D9D9;
+    z-index: 99;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    position: fixed;
+    right: 25px;
+    bottom: 35px;
+    height: 50px;
+    width: 50px;
+    transition: all 0.4s ease-in-out;
+}
+
+.scroll-up::after {
+    position: absolute;
+    font-family: "Font Awesome 6 Free";
+    content: "\f176";
+    text-align: center;
+    line-height: 50px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #D12525;
+    left: 0;
+    top: 0;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    display: block;
+    z-index: 1;
+    transition: all 0.4s ease-in-out;
+}
+
+.scroll-up svg.scroll-circle path {
+    stroke: #D12525;
+    stroke-width: 4px;
+    box-sizing: border-box;
+    transition: all 0.4s ease-in-out;
+    fill: none;
+}
+
+/*--------------- scroll css end ---------------*/
+
+/*--------------- header css start ---------------*/
+/* top */
+.header-main {
+    display: block;
+    background-color: #F4F1EA;
+}
+
+.header-main .header-inner {
+    display: block;
+}
+
+/* top */
+.header-main .top {
+    display: block;
+    position: relative;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.header-main .top::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    height: 100%;
+    width: 500px;
+    background: #212121;
+    box-sizing: border-box;
+}
+
+/* left */
+.header-main .top-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-main .top ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.header-main .top li {
+    font-size: 16px;
+    font-weight: 500;
+    color: #212121;
+}
+
+.header-main .top li span {
+    color: #D12525;
+}
+
+.header-main .top li i {
+    margin-right: 5px;
+    color: #D12525;
+}
+
+/* right */
+.header-main .top .top-right {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #D9D9D9;
+    padding-left: 25px;
+}
+
+.header-main .top .top-right .search {
+    display: block;
+    background-color: transparent;
+    border: transparent;
+}
+
+.header-main .top .top-right .search input {
+    color: #212121;
+    position: relative;
+    width: 180px;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    padding: 10px 40px 10px 7px;
+    background-color: transparent;
+    border: transparent;
+    border-radius: 0;
+}
+
+.header-main .top-left .top-right .social-icon {
+    display: flex;
+    position: relative;
+    gap: 25px;
+    z-index: 9;
+    align-items: center;
+}
+
+.header-main .top-left .top-right .social-icon>a {
+    display: block;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 50%;
+    align-items: center;
+    transition: all .4s ease-in-out;
+}
+
+.header-main .top-left .top-right .social-icon a:hover {
+    color: #D12525;
+}
+
+/*bottom*/
+/* bottom-started */
+.header-main .bottom {
+    display: block;
+}
+
+.header-main .bottom .bottom-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.header-main .bottom .logo {
+    display: block;
+}
+
+.header-main .bottom .menu {
+    display: block;
+}
+
+.header-main .bottom .menu>ul {
+    display: flex;
+}
+
+.header-main .bottom .menu>ul>li {
+    display: block;
+    position: relative;
+    margin-inline-end: 30px;
+}
+
+.header-main .bottom .menu ul li a {
+    display: block;
+    color: #212121;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 30px 0;
+    text-transform: uppercase;
+    transition: all 0.4s ease-in-out;
+}
+
+.header-main .bottom .menu ul li a:hover {
+    color: #D12525;
+}
+
+.header-main .bottom .menu ul li a i {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.header-main .bottom .bottom-inner .contact {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.header-main .bottom .bottom-inner .contact .add-cart {
+    display: block;
+    position: relative;
+}
+
+.header-main .bottom .bottom-inner .contact .add-cart .cart-icon a {
+    color: #D12525;
+    position: relative;
+    display: block;
+}
+
+.header-main .bottom .bottom-inner .contact .add-cart .cart-icon a::before {
+    content: "0";
+    position: absolute;
+    color: #fff;
+    width: 16px;
+    height: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center;
+    right: -8px;
+    top: -7px;
+    background-color: #212121;
+    border-radius: 16px;
+}
+
+.header-main .bottom .bottom-inner .contact .contact-btn {
+    display: block;
+}
+
+.header-main .bottom .bottom-inner .contact .contact-btn .button {
+    background: #D12525;
+}
+
+.header-main .bottom .bottom-inner .contact .contact-btn .button:hover::before {
+    background: #00813D;
+}
+
+.header-main .bottom .contact .side-toggle {
+    display: block;
+}
+
+.header-main .bottom .contact .nav-bar {
+    display: block;
+    position: relative;
+    width: 31px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.header-main .bottom .contact .nav-bar span {
+    position: absolute;
+    height: 2px;
+    display: inline-block;
+    background-color: #212121;
+    transition: all 0.3s;
+}
+
+.header-main .bottom .contact .nav-bar span:first-child {
+    top: 0;
+    left: 16px;
+    width: 15px;
+}
+
+.header-main .bottom .contact .nav-bar span:nth-child(2) {
+    top: 40%;
+    width: 30px;
+}
+
+.header-main .bottom .contact .nav-bar span:last-child {
+    bottom: 0;
+    width: 15px;
+}
+
+/*---hover css---*/
+/* home-menu */
+.header-main .bottom .menu ul li:hover .home-sub-menu {
+    display: block;
+}
+
+.header-main .bottom .menu .home-sub-menu {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    width: 810px;
+    left: -250px;
+    padding: 30px 30px 10px 30px;
+    background-color: #fff;
+}
+
+.header-main .bottom .menu .home-sub-menu li {
+    display: flex;
+}
+
+.header-main .bottom .menu .home-sub-menu li .item {
+    display: block;
+    padding: 0 15px;
+    margin-top: 24px;
+    width: 33.33%;
+}
+
+.header-main .bottom .menu .home-sub-menu li .item .item-inner {
+    display: block;
+}
+
+.header-main .bottom .menu .home-sub-menu li .item .item-inner .img-content {
+    display: block;
+    position: relative;
+}
+
+.header-main .bottom .menu .home-sub-menu li .item .item-inner .img-content::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(99, 92, 92, 0) 0%, #292930 100%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-main .bottom .menu .home-sub-menu li .item .item-inner img {
+    display: block;
+    width: 100%;
+}
+
+.header-main .bottom .menu .home-sub-menu li .item .item-inner .view-demo {
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    transition: transform 800ms ease, opacity 600ms linear;
+    opacity: 0;
+}
+
+.header-main .bottom .menu .home-sub-menu li .item .item-inner .view-demo a {
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 16px 30px;
+    width: initial;
+    display: none;
+    background-color: #00813d;
+    color: #fff;
+}
+
+.header-main .bottom .menu .home-sub-menu li .item .item-inner .img-content:hover::before {
+    opacity: 1;
+}
+
+.header-main .bottom .menu .home-sub-menu li .item .item-inner .img-content:hover .view-demo {
+    opacity: 1;
+}
+
+.header-main .bottom .menu .home-sub-menu li .item .item-inner .img-content .button {
+    display: inline-block;
+}
+
+.header-main .bottom .menu .home-sub-menu li .item .item-inner .view-demo a:hover::before {
+    background-color: #D12525;
+    border-radius: 5px;
+}
+
+.header-main .bottom .menu .home-sub-menu li .item .item-inner .text-content {
+    display: block;
+    text-align: center;
+}
+
+.header-main .bottom .menu .home-sub-menu li .item .item-inner .text-content h4 {
+    display: block;
+}
+
+.header-main .bottom .menu .home-sub-menu li .item .item-inner .text-content h4 a {
+    display: block;
+    padding: 11px 25px;
+    font-weight: 600;
+}
+
+/* sub-menu */
+.header-main .bottom .menu .sub-menu {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    min-width: 240px;
+    background-color: #fff;
+    top: 100%;
+    columns: #212121;
+    transition: all 0.4s ease-in-out;
+}
+
+.header-main .bottom .menu .sub-menu li {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.header-main .bottom .menu .sub-menu li .sub-menu {
+    display: none;
+    top: 0%;
+    left: 100%;
+}
+
+.header-main .bottom .menu .sub-menu li a {
+    position: relative;
+    z-index: 11;
+    font-size: 18px;
+    font-weight: 600;
+    color: #212121;
+    padding: 11px 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.header-main .bottom .menu ul li:hover>.sub-menu {
+    display: block;
+}
+
+.header-main .bottom .menu ul li .sub-menu li:hover>a {
+    background-color: #D12525;
+    color: #fff;
+}
+
+/* cart-hover */
+.header-main .bottom .bottom-inner .contact .add-cart:hover .cart-box {
+    transform: rotateX(0deg);
+    visibility: visible;
+}
+
+.header-main .bottom .bottom-inner .contact .add-cart .cart-box {
+    padding: 5px 20px 0px;
+    position: absolute;
+    left: -70px;
+    top: 200%;
+    transform: rotateX(90deg);
+    transform-origin: center top 0;
+    transition: all 0.5s ease 0s;
+    width: 340px;
+    z-index: 9999;
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 0 0 7px 0.5px rgba(0, 0, 0, 0.15);
+    visibility: hidden;
+}
+
+.header-main .bottom .bottom-inner .contact .add-cart .cart-box ul li {
+    display: flex;
+    align-items: center;
+    padding: 2px 0;
+    gap: 10px;
+    border-bottom: 1px solid #D9D9D9;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.header-main .bottom .bottom-inner .contact .add-cart .cart-box ul li img {
+    width: 90px;
+}
+
+.header-main .bottom .bottom-inner .contact .add-cart .cart-box ul li a {
+    position: relative;
+}
+
+.header-main .bottom .bottom-inner .contact .add-cart .cart-box ul li a::after {
+    position: absolute;
+    content: "\f00d";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+    top: 15px;
+    right: -88px;
+    color: #fff;
+    font-size: 10px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 30px;
+    background-color: #D12525;
+    text-align: center;
+}
+
+.header-main .bottom .bottom-inner .contact .add-cart .cart-box ul li span {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    color: #212121;
+}
+
+.header-main .bottom .bottom-inner .contact .add-cart .cart-box .shopping-items {
+    margin-top: 10px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.header-main .bottom .bottom-inner .contact .add-cart .cart-box .shopping-items span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #212121;
+    text-transform: uppercase;
+    justify-content: space-between;
+}
+
+.header-main .bottom .bottom-inner .contact .add-cart .cart-box .cart-button {
+    margin-top: 20px;
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.header-main .bottom .bottom-inner .contact .add-cart .cart-box .cart-button .button {
+    padding: 16px 28px;
+    font-size: 14px;
+}
+
+.header-main .bottom .bottom-inner .contact .add-cart .cart-box .cart-button a:first-child {
+    background: #00813D;
+}
+
+.header-main .bottom .bottom-inner .contact .add-cart .cart-box .cart-button a:first-child:hover::before {
+    background-color: #D12525;
+}
+
+.header-main .bottom .bottom-inner .contact .add-cart .cart-box .cart-button a:last-child {
+    background-color: #D12525;
+}
+
+.header-main .bottom .bottom-inner .contact .add-cart .cart-box .cart-button a:last-child:hover::before {
+    background: #00813D;
+}
+
+/* toggle-hover */
+.toggle-menu {
+    display: block;
+}
+
+.toggle-menu .item {
+    background: #fff none repeat scroll 0 0;
+    border-left: 2px solid #D12525;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    transition: transform 0.45s ease-in-out, opacity 0.45s ease-in-out;
+    z-index: 999;
+}
+
+.toggle-menu .item .item-inner {
+    position: relative;
+    height: 100%;
+    padding: 30px 30px;
+}
+
+.toggle-menu .item .item-inner .toggle-content {
+    display: block;
+}
+
+.toggle-menu .item .item-inner .toggle-content .toggle-top {
+    display: flex;
+    margin-bottom: 48px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-menu .item .item-inner .toggle-content .toggle-top .close {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #D12525;
+    position: relative;
+    z-index: 9;
+    cursor: pointer;
+}
+
+.toggle-menu .item .item-inner .toggle-content .toggle-top .close i {
+    color: #fff;
+}
+
+.toggle-menu .item .item-inner .toggle-content .gallery {
+    margin-top: 30px;
+}
+
+.toggle-menu .item .item-inner .toggle-content .gallery .gallary-items:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.toggle-menu .item .item-inner .toggle-content .gallery .gallary-items {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.toggle-menu .item .item-inner .toggle-content .gallery .gallary-items img {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.toggle-menu .item .item-inner .toggle-content .contact {
+    margin-top: 20px;
+}
+
+.toggle-menu .item .item-inner .toggle-content .contact h4 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.toggle-menu .item .item-inner .toggle-content .contact ul {
+    margin-top: 20px;
+}
+
+.toggle-menu .item .item-inner .toggle-content .contact ul li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.toggle-menu .item .item-inner .toggle-content .contact ul li {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-menu .item .item-inner .toggle-content .contact ul li .contact-text a {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.toggle-menu .item .item-inner .toggle-content .contact ul li .icon {
+    margin-right: 20px;
+}
+
+/*--------------- header css end ---------------*/
+
+
+
+/*--------------- banner css start ---------------*/
+.banner-main {
+    display: block;
+    background-image: url(../img/hero/hero-bg.jpg);
+    z-index: 1;
+    padding: 200px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-main .chilii-shape {
+    position: absolute;
+    left: 0;
+    top: 5%;
+}
+
+.banner-main .fire-shape {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.banner-main .chilii-shape-2 {
+    position: absolute;
+    top: 5%;
+    right: 0;
+}
+
+.banner-main .chilii-shape-3 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.banner-main .offer-shape {
+    position: absolute;
+    top: 5%;
+    left: 40%;
+}
+
+.banner-main .back-title {
+    font-size: 300px;
+    line-height: 50%;
+    color: rgba(255, 255, 255, 0.102);
+    letter-spacing: -12px;
+    opacity: 0.69;
+    position: absolute;
+    text-transform: uppercase;
+    bottom: 30%;
+    left: 16%;
+    z-index: -1;
+    font-weight: 700;
+    animation-duration: 5s;
+}
+
+.banner-main .banner-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.banner-main .item:first-child {
+    width: 41.66%;
+}
+
+.banner-main .item {
+    display: block;
+    width: 50%;
+    padding: 0 10px;
+}
+
+.banner-main .item p {
+    font-weight: 600;
+    color: #D12525;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.banner-main .item h1 {
+    color: #fff;
+    font-size: 145px;
+    font-weight: 600;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.banner-main .item h1 span {
+    position: relative;
+}
+
+.banner-main .item h1 span::before {
+    position: absolute;
+    content: "";
+    width: 83px;
+    height: 75px;
+    background-image: url("../img/icon/icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 9;
+    right: -70px;
+}
+
+.banner-main .item .button {
+    background-color: #00813D;
+    margin-top: 35px;
+}
+
+.banner-main .item .button:hover::before {
+    background-color: #D12525;
+}
+
+.banner-main .item .img-content {
+    display: block;
+    width: 760px;
+}
+
+.banner-main .item .img-content img {
+    width: 100%;
+    height: 100%;
+}
+
+/*--------------- banner css end ---------------*/
+
+/*--------------- category css start ---------------*/
+.category-main {
+    display: block;
+    position: relative;
+    padding: 120px 0;
+}
+
+.category-main .main-inner {
+    display: block;
+}
+
+.category-main .main-inner .tomato-shape {
+    position: absolute;
+    left: 0;
+}
+
+.category-main .main-inner .burger-shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(100%, 0%);
+}
+
+.category-main .main-inner .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.category-main .main-inner .top .right {
+    display: block;
+    text-align: right;
+}
+
+.category-main .main-inner .top .right .arrow {
+    display: block;
+}
+
+.category-main .main-inner .top .right .arrow .previous {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: transparent;
+    margin-right: 20px;
+    border: 1px solid white;
+    color: red;
+}
+
+.category-main .main-inner .top .right .arrow .next {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 100%;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.06);
+    border: none;
+    background-color: #D12525;
+    color: white;
+}
+
+.category-main .main-inner .bottom {
+    display: block;
+}
+
+.category-main .main-inner .bottom .bottom-inner {
+    display: flex;
+    position: relative;
+    margin: 0 -12px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.category-main .main-inner .bottom .bottom-inner .item {
+    display: block;
+    width: 25%;
+    height: 100%;
+    padding: 0 12px;
+}
+
+.category-main .main-inner .bottom .bottom-inner .item .item-inner {
+    display: block;
+    background-image: url(../img/shape/catagory-card-shape.png);
+    background-color: #fff;
+    padding: 20px 30px 50px;
+    margin-top: 30px;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+.category-main .main-inner .bottom .bottom-inner .item .item-inner:hover {
+    background-color: #ffb936;
+}
+
+.category-main .main-inner .bottom .item .item-inner h5 {
+    font-size: 19px;
+    color: #fff;
+    position: relative;
+    z-index: 9;
+    display: block;
+}
+
+.category-main .main-inner .bottom .item .item-inner .image {
+    display: block;
+    height: 245px;
+    text-align: center;
+    position: relative;
+    z-index: 9;
+}
+
+.category-main .main-inner .bottom .item .item-inner .image .leaf {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    transform: translate(-40px, 40px);
+    transition: all 0.3s ease;
+    transition-delay: 0.1s;
+    opacity: 0;
+    z-index: -1;
+}
+
+.category-main .main-inner .bottom .item .item-inner:hover .image .leaf {
+    right: -15px;
+    transform: translate(0);
+    opacity: 1;
+}
+
+.category-main .main-inner .bottom .item .item-inner .image .leaf-2 {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    transition: all 0.3s ease;
+    transition-delay: 0.1s;
+    opacity: 0;
+    z-index: -1;
+}
+
+.category-main .main-inner .bottom .item .item-inner:hover .image .leaf-2 {
+    left: -20px;
+    opacity: 1;
+}
+
+.category-main .main-inner .bottom .item .item-inner .image .burger {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    transition: all 0.3s ease;
+    opacity: 0;
+    z-index: -1;
+}
+
+.category-main .main-inner .bottom .item .item-inner:hover .image .burger {
+    opacity: 1;
+}
+
+.category-main .main-inner .bottom .item .item-inner .image img {
+    vertical-align: middle;
+}
+
+.category-main .main-inner .bottom .item .item-inner .text-content {
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    padding-top: 25px;
+    z-index: 9;
+    text-align: center;
+}
+
+.category-main .main-inner .bottom .item .item-inner .text-content::before {
+    position: absolute;
+    top: 0;
+    content: "";
+    left: 40%;
+    width: 53px;
+    height: 2px;
+    background-color: #D12525;
+}
+
+.category-main .main-inner .bottom .item .item-inner:hover .text-content::before {
+    background-color: #fff;
+}
+
+.category-main .main-inner .bottom .item .item-inner .text-content h3 {
+    transition: all .3s ease-in-out;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    margin-top: -60px;
+}
+
+.category-main .main-inner .bottom .item .item-inner .text-content h3 a {
+    color: #212121;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.category-main .main-inner .bottom .item .item-inner .text-content p {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #D12525;
+    text-transform: uppercase;
+    z-index: 9;
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+
+.category-main .main-inner .bottom .item .item-inner:hover .text-content h3,
+.category-main .main-inner .bottom .item .item-inner:hover .text-content p {
+    display: none;
+}
+
+.category-main .main-inner .bottom .item .item-inner .text-content .text-img {
+    width: 125px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.category-main .main-inner .bottom .item .item-inner:hover .text-content .text-img {
+    display: block;
+}
+
+/*--------------- category css end ---------------*/
+
+/*--------------- food-banner css start ---------------*/
+.food-banner-main {
+    display: block;
+    position: relative;
+}
+
+.food-banner-main .chilli-shape {
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+}
+
+.food-banner-main .fry-shape {
+    position: absolute;
+    right: 2%;
+}
+
+.food-banner-main .image {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+}
+
+.food-banner-main .image .left {
+    display: block;
+    width: 41.66666667%;
+    padding: 0 12px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.food-banner-main .image .left .bg-cover {
+    background-image: url('../img/banner/offer-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.food-banner-main .image .bg-cover .offer-content {
+    position: relative;
+    z-index: 99;
+    padding: 50px;
+    line-height: 1.2;
+    box-sizing: border-box;
+}
+
+.food-banner-main .image .bg-cover .offer-content h5 {
+    font-weight: 700;
+    color: #D12525;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.food-banner-main .image .bg-cover .offer-content h3 {
+    font-size: 55px;
+    color: white;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.food-banner-main .image .bg-cover .offer-image {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    z-index: 9;
+}
+
+.food-banner-main .image .bg-cover .burger-text {
+    position: absolute;
+    right: 20%;
+    top: 0;
+    z-index: 9;
+}
+
+.food-banner-main .image .bg-cover .main-food {
+    position: absolute;
+    right: -20px;
+    bottom: -5px;
+    transition: all 0.4s ease-in-out;
+}
+
+.food-banner-main .image .bg-cover .main-food:hover {
+    transform: scale(1.1);
+}
+
+.food-banner-main .image .right {
+    display: block;
+    width: 58.33333333%;
+    padding: 0 12px;
+    box-sizing: border-box;
+}
+
+.food-banner-main .image .right .bg-cover {
+    background-image: url('../img/banner/pizza-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 60px 50px;
+    overflow: hidden;
+}
+
+.food-banner-main .image .right .bg-cover .pizza-text {
+    position: relative;
+    z-index: 9;
+}
+
+.food-banner-main .image .right .bg-cover .pizza-text-2 {
+    position: absolute;
+    top: 5px;
+    right: 15%;
+}
+
+.food-banner-main .image .right .bg-cover .pizza-image {
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    transition: all 0.4s ease-in-out;
+    z-index: 99;
+}
+
+.food-banner-main .image .right .bg-cover .pizza-image:hover {
+    transform: scale(1.1);
+}
+
+/*--------------- food-banner css end ---------------*/
+
+
+/*--------------- brand css start ---------------*/
+.brand-main {
+    display: block;
+    padding: 120px 0;
+    box-sizing: border-box;
+}
+
+.brand-main .brand-inner {
+    display: block;
+}
+
+.brand-main .brand-inner .top {
+    font-weight: 600;
+    margin-bottom: 50px;
+    position: relative;
+    margin-top: -5px;
+}
+
+.brand-main .brand-inner .top::before {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    content: "";
+    background-color: #d9d9d9;
+    width: 970px;
+    height: 1px;
+}
+
+.brand-main .brand-inner .top h4 {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #212121;
+}
+
+.brand-main .brand-inner .top h4 span {
+    color: #ffb936;
+}
+
+.brand-main .brand-inner .bottom {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    align-items: center;
+}
+
+.brand-main .brand-inner .bottom .item {
+    width: 16.66%;
+    padding: 0 15px;
+    transition: all .35s ease-in-out;
+}
+
+.brand-main .brand-inner .bottom .item:hover {
+    filter: brightness(50%) grayscale(100%) contrast(150%);
+}
+
+/*--------------- brand css end ---------------*/
+
+/*--------------- grill-banner css start ---------------*/
+.grilled-banner-main {
+    display: block;
+    background: url(../img/banner/main-bg.jpg);
+    overflow: hidden;
+    padding: 120px 0;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.grilled-banner-main .patato-shape {
+    position: absolute;
+    bottom: -80px;
+    left: -40px;
+}
+
+.grilled-banner-main .offer-shape {
+    position: absolute;
+    bottom: 33%;
+    left: 2%;
+}
+
+.grilled-banner-main .spicy-shape {
+    position: absolute;
+    right: 7%;
+    top: 15%;
+}
+
+.grilled-banner-main .tomato-shape {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.grilled-banner-main .text-shape {
+    position: absolute;
+    bottom: 20%;
+    left: 52%;
+    transform: rotate(30.01deg);
+}
+
+.grilled-banner-main .grilled-banner-inner {
+    display: flex;
+    align-items: center;
+    margin: 0 -12px;
+    flex-wrap: wrap;
+}
+
+.grilled-banner-main .item {
+    display: block;
+    width: 50%;
+    padding: 0 12px;
+}
+
+.grilled-banner-main .item .item-inner {
+    display: block;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.grilled-banner-main .item h4 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.grilled-banner-main .item h2 {
+    font-size: 70px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 110%;
+}
+
+.grilled-banner-main .item span {
+    color: #ffb936;
+}
+
+.grilled-banner-main .item h3 {
+    margin-top: 20px;
+    font-size: 44px;
+    font-weight: 700;
+}
+
+.grilled-banner-main .item h3 span:nth-child(2) {
+    font-size: 28px;
+}
+
+.grilled-banner-main .item h3 a {
+    color: #fff;
+    font-size: 44px;
+}
+
+.grilled-banner-main .item .button {
+    margin-top: 40px;
+    background-color: #00813D;
+}
+
+.grilled-banner-main .item .button:hover::before {
+    background-color: #D12525;
+}
+
+.grilled-banner-main .item img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*--------------- grill-banner css end ---------------*/
+
+/*--------------- food-category css start ---------------*/
+.food-category-main {
+    display: block;
+    padding: 120px 0;
+}
+
+.food-category-main .food-category-inner {
+    display: block;
+}
+
+.food-category-main .food-category-inner .top .title {
+    text-align: center !important;
+}
+
+.food-category-main .food-category-inner .bottom {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+}
+
+.food-category-main .food-category-inner .bottom .item {
+    width: 25%;
+    display: block;
+    padding: 0 12px;
+}
+
+.food-category-main .food-category-inner .bottom .item .item-inner {
+    margin-top: 30px;
+    padding: 40px 30px;
+    position: relative;
+    text-align: center;
+}
+
+.food-category-main .food-category-inner .bottom .item .item-inner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65%;
+    border-radius: 14px;
+    background-color: #fff;
+    transition: all .35s ease-in-out;
+}
+
+.food-category-main .food-category-inner .bottom .item:nth-child(2) .item-inner::before,
+.food-category-main .food-category-inner .bottom .item .item-inner:hover:before {
+    background-color: #ffb936;
+    background-image: url(../img/shape/catagory-card-shape.png);
+    height: 100%;
+}
+
+.food-category-main .food-category-inner .bottom .item .item-inner .icon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    background-color: #212121;
+    text-align: center;
+    z-index: 9;
+}
+
+.food-category-main .food-category-inner .bottom .item .icon:hover {
+    background-color: #fff;
+}
+
+.food-category-main .food-category-inner .bottom .item .item-inner .icon:hover i {
+    color: #ffb936;
+}
+
+.food-category-main .food-category-inner .bottom .item:nth-child(2) .icon {
+    background-color: #fff;
+}
+
+.food-category-main .food-category-inner .bottom .item .item-inner .icon i {
+    color: #fff;
+}
+
+.food-category-main .food-category-inner .bottom .item:nth-child(2) .item-inner .icon i {
+    color: #ffb936;
+}
+
+.food-category-main .food-category-inner .bottom .item .item-inner .product-image {
+    position: relative;
+    z-index: 1;
+    height: 245px;
+}
+
+.food-category-main .food-category-inner .bottom .item .item-inner .product-content {
+    position: relative;
+    z-index: 9;
+    margin-top: 30px;
+}
+
+.food-category-main .food-category-inner .bottom .item .item-inner .category-button {
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.food-category-main .food-category-inner .item .item-inner .product-content h4 a {
+    text-transform: uppercase;
+    transition: all 0.4s ease-in-out;
+}
+
+.food-category-main .food-category-inner .item .item-inner .product-content h4 a:hover {
+    color: #fff;
+}
+
+.food-category-main .food-category-inner .item:nth-child(2) .item-inner .product-content .category-button,
+.food-category-main .food-category-inner .item .item-inner:hover .product-content .category-button {
+    opacity: 1;
+}
+
+.food-category-main .food-category-inner .bottom .item .item-inner .category-button .button {
+    overflow: hidden;
+    vertical-align: middle;
+    padding: 10px 50px;
+    background-color: #212121;
+    border-radius: 19px;
+    width: 100%;
+    letter-spacing: normal;
+    text-transform: capitalize;
+}
+
+.food-category-main .food-category-inner .bottom .item .item-inner .category-button .button:hover::before {
+    overflow: hidden;
+    vertical-align: middle;
+    padding: 10px 50px;
+    background-color: #00813D;
+    border-radius: 19px;
+    width: 100%;
+}
+
+.food-category-main .food-category-inner .bottom .item .item-inner .prize {
+    gap: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.food-category-main .food-category-inner .bottom .item .item-inner .prize p {
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #ffb936;
+    padding: 4px 6px;
+    border-radius: 3px;
+    color: #212121;
+}
+
+.food-category-main .food-category-inner .bottom .item:hover .item-inner .prize p {
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #fff;
+    padding: 4px 6px;
+    border-radius: 3px;
+    color: #212121;
+}
+
+.food-category-main .food-category-inner .bottom .item:nth-child(2) .item-inner .prize p {
+    background-color: #fff;
+}
+
+.food-category-main .food-category-inner .bottom .item .item-inner .prize h6 {
+    color: #D12525;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 145%;
+}
+
+.food-category-main .food-category-inner .bottom .item .item-inner .prize span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #5c5c5b;
+    transition: all 0.4s ease-in-out;
+}
+
+.food-category-main .food-category-inner .bottom .item .item-inner h4 a {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.food-category-main .food-category-inner .bottom .item .item-inner .star {
+    margin-top: 5px;
+}
+
+.food-category-main .food-category-inner .bottom .item .item-inner .product-content .star span {
+    color: #ffb936;
+    font-size: 14px;
+}
+
+.food-category-main .food-category-inner .bottom .item .item-inner .product-content .star span:last-child {
+    color: #fff;
+}
+
+.food-category-main .food-category-inner .bottom .item:nth-child(2) .item-inner .product-content .star span,
+.food-category-main .food-category-inner .bottom .item:hover .item-inner .product-content .star span {
+    color: #fff;
+}
+
+.food-category-main .food-category-inner .btn {
+    text-align: center;
+    padding-top: 24px;
+}
+
+.food-category-main .food-category-inner .btn .button {
+    background-color: #00813d;
+}
+
+.food-category-main .food-category-inner .btn .button:hover::before {
+    background-color: #D12525;
+}
+
+/*--------------- food-category css end ---------------*/
+
+/*--------------- food-combo css start ---------------*/
+.food-combo-main {
+    background-image: url('../img/bg-image/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    padding: 120px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: block;
+}
+
+.food-combo-main .drink-shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.food-combo-main .food-combo-inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.food-combo-main .food-combo-inner .item {
+    width: 50%;
+    display: block;
+    padding: 0 12px;
+    max-width: 100%;
+}
+
+.food-combo-main .food-combo-inner .item .item-inner {
+    display: block;
+}
+
+.food-combo-main .food-combo-inner .item .item-inner .title {
+    position: relative;
+    z-index: 99;
+    margin-bottom: 30px;
+    margin-top: -6px;
+}
+
+.food-combo-main .food-combo-inner .item .item-inner .title h2 {
+    font-size: 70px;
+    line-height: 110%;
+}
+
+.food-combo-main .food-combo-inner .item .item-inner p {
+    color: #5c5c5b;
+}
+
+.food-combo-main .food-combo-inner .item .item-inner .nav-tab {
+    display: inline-block;
+    border: none;
+    margin-top: 40px;
+}
+
+.food-combo-main .food-combo-inner .item .item-inner .nav-tab button:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.food-combo-main .food-combo-inner .item .item-inner .nav-tab button {
+    padding: 0;
+    border: none;
+    background: none;
+    max-width: 500px;
+    width: 100%;
+}
+
+.food-combo-main .food-combo-inner .item .item-inner .nav-tab button>span {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 15px 30px;
+    background-color: #F4F1EA;
+    border-radius: 5px;
+}
+
+.food-combo-main .food-combo-inner .item .item-inner .nav-tab button:nth-child(2)>span {
+    background-color: #ffb936;
+}
+
+.food-combo-main .food-combo-inner .item .item-inner .nav-tab button>span>.btn-text {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #212121;
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+.food-combo-main .food-combo-inner .item .item-inner .combo-img {
+    display: block;
+    position: absolute;
+    width: 898px;
+    height: 780px;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/banner/comboo-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.food-combo-main .food-combo-inner .item .item-inner .combo-img .pizza-text {
+    position: absolute;
+    top: 15%;
+    left: 10px;
+    z-index: 9;
+}
+
+.food-combo-main .food-combo-inner .item .item-inner .combo-img .pizza-img {
+    position: absolute;
+    top: 25%;
+    left: -12%;
+    max-width: 1100px;
+}
+
+.food-combo-main .food-combo-inner .item .item-inner .combo-img .pizza-img img {
+    width: 100%;
+}
+
+.food-combo-main .food-combo-inner .item .item-inner .combo-img .offer-shape {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+}
+
+.food-combo-main .food-combo-inner .item .item-inner .combo-img .vegetable-shape {
+    position: absolute;
+    right: 10%;
+    top: 5%;
+}
+
+/*--------------- food-combo css end ---------------*/
+
+
+/*--------------- text-slider css start ---------------*/
+.text-slider-main {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 120px;
+}
+
+.text-slider-inner {
+    font-size: 130px;
+    height: 100px;
+    line-height: 85px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 30px;
+    margin-bottom: -3px;
+}
+
+.text-slider-main .item {
+    animation: marqueeLeft 25s linear infinite;
+    display: inline-flex;
+    position: absolute;
+    width: 200%;
+}
+
+.text-slider-main .text-slider-list {
+    display: flex;
+}
+
+.text-slider-main .text-item {
+    float: left;
+    transition: animation .2s ease-out;
+}
+
+.text-slider-main .text-slider {
+    font-size: 130px;
+    height: 100px;
+    line-height: 85px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-style: italic;
+    stroke-width: 1px;
+}
+
+.text-slider-main .text-color {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #A4A4A4;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-color-2 {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #D12525;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes marqueeLeft {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+/*--------------- text-slider css end ---------------*/
+
+/*--------------- icon-section css start ---------------*/
+.icon-main {
+    display: block;
+}
+
+.icon-main .icon-inner {
+    display: block;
+    background-image: url(../img/shape/food-shape-2.png);
+    background-color: #212121;
+    border-radius: 14px;
+    padding: 70px 75px;
+}
+
+.icon-main .icon-inner .icon-content {
+    display: flex;
+    margin: 0 -12px;
+    flex-wrap: wrap;
+}
+
+.icon-main .icon-inner .icon-content .item {
+    width: 25%;
+    display: block;
+    padding: 0 12px;
+    margin-top: 24px;
+}
+
+.icon-main .icon-inner .icon-content .item .item-inner {
+    display: block;
+}
+
+.icon-main .icon-inner .icon-content .item .item-inner .icon {
+    display: block;
+}
+
+.icon-main .icon-inner .icon-content .item .item-inner .icon img {
+    width: 55px;
+}
+
+.icon-main .icon-inner .icon-content .item .item-inner .text-content {
+    margin-top: 20px;
+    color: white;
+}
+
+.icon-main .icon-inner .icon-content .item .item-inner .text-content h4 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+
+/*--------------- icon-section css end ---------------*/
+
+/*--------------- about-section css start  ---------------*/
+.about-main {
+    display: block;
+    padding: 120px 0;
+}
+
+.about-main .about-inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-main .about-inner .left {
+    width: 50%;
+    display: block;
+}
+
+.about-main .about-inner .left .about-img {
+    position: relative;
+}
+
+.about-main .about-inner .left .about-img img {
+    width: 100%;
+}
+
+.about-main .about-inner .left .about-img .burger-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.about-main .about-inner .left .about-img .price {
+    position: absolute;
+    left: 10%;
+    bottom: 20px;
+}
+
+.about-main .about-inner .left .about-img .price h2 {
+    font-size: 80px;
+    line-height: 110%;
+    font-weight: 700;
+    color: #212121;
+}
+
+.about-main .about-inner .left .about-img .since-text {
+    padding: 25px 30px;
+    background-color: #ffb936;
+    position: absolute;
+    right: 20px;
+    bottom: 45px;
+    border-radius: 14px;
+    transform: rotate(-25.477deg);
+    width: initial;
+    height: initial;
+    text-transform: uppercase;
+}
+
+.about-main .about-inner .left .about-img .since-text h3 {
+    font-size: 44px;
+    font-weight: 700;
+    color: white;
+    line-height: 1.2;
+}
+
+.about-main .about-inner .right {
+    width: 50%;
+}
+
+.about-main .about-inner .right .about-content {
+    margin-left: 20px;
+}
+
+.about-main .about-inner .right .about-content .icon-area {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 10px;
+    align-items: center;
+}
+
+.about-main .about-inner .right .about-content .icon-area .item {
+    display: flex;
+    gap: 20px;
+}
+
+.about-main .about-inner .right .about-content .icon-area .item img {
+    width: 55px;
+}
+
+.about-main .about-inner .right .about-content .icon-area .item .content {
+    display: block;
+    color: #212121;
+}
+
+.about-main .about-inner .right .about-content .icon-area .item .content h4 {
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.about-main .about-inner .right .about-content .icon-area .item .icon {
+    font-size: 55px;
+    color: #D12525;
+}
+
+.about-main .about-inner .right .about-content .info-area {
+    margin-top: 40px;
+    gap: 22px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-main .about-inner .right .about-content .info-area .info-content span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #D12525;
+}
+
+.about-main .about-inner .right .about-content .info-area .info-content h6 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 145%;
+    color: #212121;
+    text-transform: uppercase;
+}
+
+.about-main .about-inner .right .about-content .info-area .button {
+    background-color: #00813d;
+}
+
+.about-main .about-inner .right .about-content .info-area .btn .button:hover::before {
+    background-color: #D12525;
+}
+
+/*--------------- about-section css end  ---------------*/
+
+/*--------------- offer css start  ---------------*/
+.offer-main {
+    display: block;
+    padding-bottom: 120px;
+}
+
+.offer-main .offer-inner {
+    display: flex;
+    margin: 0 -12px;
+    flex-wrap: wrap;
+}
+
+.offer-main .offer-inner .item {
+    display: block;
+    padding: 0 12px
+}
+
+.offer-main .offer-inner .item:first-child {
+    width: 58.33%;
+}
+
+.offer-main .offer-inner .item:last-child {
+    width: 41.66%;
+}
+
+.offer-main .offer-inner .item:first-child .item-inner {
+    background-image: url(../img/banner/burger-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    display: block;
+}
+
+.offer-main .offer-inner .item:last-child .item-inner {
+    background-image: url(../img/banner/pepsi-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+}
+
+.offer-main .offer-inner .item .item-inner .text-content {
+    padding: 100px 40px;
+    max-width: 300px;
+    position: relative;
+    z-index: 9;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+}
+
+.offer-main .offer-inner .item .item-inner .text-content h3 {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.offer-main .offer-inner .item .item-inner .text-content h2 {
+    font-size: 70px;
+    line-height: 110%;
+    font-weight: 700;
+}
+
+.offer-main .offer-inner .item .item-inner .text-content h4 {
+    margin-top: 10px;
+}
+
+.offer-main .offer-inner .item .item-inner .text-content h4 a {
+    font-size: 40px;
+    color: #fff;
+}
+
+.offer-main .offer-inner .item .item-inner .text-content h4 a span {
+    color: #ffb936;
+}
+
+.offer-main .offer-inner .item .item-inner .burger-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.offer-main .offer-inner .item:hover .item-inner .burger-img {
+    transform: scale(1.1);
+}
+
+.offer-main .offer-inner .item .item-inner .text-shape {
+    position: absolute;
+    top: 40px;
+    right: 65px;
+}
+
+.offer-main .offer-inner .item .item-inner .burger-text {
+    position: absolute;
+    top: 20%;
+    left: 38%;
+}
+
+.offer-main .offer-inner .offer-content {
+    padding: 60px 45px;
+    position: relative;
+    z-index: 99;
+    text-transform: uppercase;
+    color: white;
+}
+
+.offer-main .offer-inner .offer-content h5 {
+    font-weight: 700;
+    color: #D12525;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.offer-main .offer-inner .offer-content h3 {
+    font-size: 55px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.offer-main .offer-inner .offer-content p {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: all 0.4s ease-in-out;
+}
+
+.offer-main .offer-inner .offer-img {
+    position: absolute;
+    top: 30%;
+    left: 43%;
+}
+
+.offer-main .offer-inner .rooler-box {
+    position: absolute;
+    right: -20px;
+    bottom: -10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.offer-main .offer-inner .rooler-box:hover {
+    right: -50px;
+}
+
+.offer-main .offer-inner .btn {
+    margin-top: 24px;
+}
+
+.offer-main .offer-inner .button {
+    background-color: #00813d;
+}
+
+.offer-main .offer-inner .btn .button:hover::before {
+    background-color: #D12525;
+}
+
+/*--------------- offer css end  ---------------*/
+
+/*--------------- kfc-banner css start  ---------------*/
+.kfc-banner-main {
+    padding: 120px 0;
+    display: block;
+    background-image: url(../img/bg-image/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.kfc-banner-main .kfc-banner-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 12px;
+    margin: 0 -12px;
+}
+
+.kfc-banner-main .kfc-banner-inner .item {
+    display: block;
+    width: 50%;
+    padding: 0 12px;
+}
+
+.kfc-banner-main .kfc-banner-inner .item:first-child {
+    width: 41.66%;
+}
+
+.kfc-banner-main .kfc-banner-inner .item:first-child .item-inner {
+    display: block;
+    background-image: url(../img/banner/kfc-bg.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1017px;
+    height: 730px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.kfc-banner-main .kfc-banner-inner .item:first-child .item-inner .kfc-img {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 960px;
+    transition: all 0.4s ease-in-out;
+}
+
+.kfc-banner-main .kfc-banner-inner .item:first-child .item-inner .kfc-img img {
+    width: 100%;
+}
+
+.kfc-banner-main .kfc-banner-inner .item:hover:first-child .item-inner .kfc-img {
+    left: -30px;
+}
+
+.kfc-banner-main .kfc-banner-inner .item:first-child .item-inner .offer-shape {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+}
+
+.kfc-banner-main .kfc-banner-inner .item:last-child .item-inner .kfc-content {
+    margin-left: 80px;
+    text-align: center;
+}
+
+.kfc-banner-main .kfc-banner-inner .item:last-child .item-inner .kfc-content .title {
+    text-align: center;
+}
+
+.kfc-banner-main .kfc-banner-inner .item:last-child .item-inner .kfc-content .content {
+    margin-top: 16px;
+}
+
+.kfc-banner-main .kfc-banner-inner .item:last-child .item-inner .kfc-content ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.kfc-banner-main .kfc-banner-inner .item:last-child .item-inner .kfc-content ul li span {
+    font-size: 44px;
+    font-weight: 600;
+    color: #D12525;
+}
+
+.kfc-banner-main .kfc-banner-inner .item:last-child .item-inner .kfc-content ul li p {
+    font-size: 19px;
+    font-weight: 500;
+    color: #212121;
+}
+
+.kfc-banner-main .kfc-banner-inner .item:last-child .item-inner .kfc-content .btn {
+    margin-top: 48px;
+}
+
+.kfc-banner-main .kfc-banner-inner .item:last-child .item-inner .kfc-content .btn .button {
+    background-color: #00813D;
+}
+
+.kfc-banner-main .kfc-banner-inner .item:last-child .item-inner .kfc-content .btn .button:hover::before {
+    background-color: #D12525;
+}
+
+/*--------------- kfc-banner css start  end  ---------------*/
+
+
+/*--------------- testimonial css start  ---------------*/
+/* testimonial Strat */
+.testimonial-main {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding-top: 120px;
+}
+
+.testimonial-main .burger-shape {
+    position: absolute;
+    bottom: 30%;
+    left: 5%;
+}
+
+.testimonial-main .fry-shape {
+    position: absolute;
+    right: 15%;
+    top: 10%;
+    transform: translate(0%, 100%);
+}
+
+.testimonial-main .pizza-shape {
+    position: absolute;
+    right: 15%;
+    bottom: 22%;
+}
+
+.testimonial-main .testimonial-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.testimonial-main .text-content {
+    margin-top: -7px;
+}
+
+.testimonial-main .client-info {
+    margin-bottom: 30px;
+}
+
+.testimonial-main h4 {
+    font-size: 29px;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #212121;
+}
+
+.testimonial-main h5 {
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #D12525;
+}
+
+.testimonial-main h3 {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #212121;
+}
+
+.testimonial-main .star {
+    color: #ffb936;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.testimonial-main .item:last-child {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.testimonial-main .img-content {
+    display: flex;
+}
+
+.testimonial-main .client-img {
+    width: 93.3333px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.testimonial-main .img-content .client-img:nth-child(2)::before {
+    position: absolute;
+    bottom: 35px;
+    left: 2px;
+    content: "";
+    background-color: #ffb936;
+    height: 120px;
+    width: 90px;
+    border-radius: 7px;
+}
+
+.testimonial-main .item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 50px auto;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    border: 5px solid #fff;
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.06);
+}
+
+/*--------------- testimonial css end  ---------------*/
+
+/*--------------- Cta Banner css start ---------------*/
+.cta-banner-main {
+    display: block;
+    padding: 120px 0;
+}
+
+.cta-banner-inner {
+    background-image: url(../img/banner/main-cta-bg.jpg);
+    padding: 120px 100px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 9;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+.cta-banner-main .arrow-shape {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+}
+
+.cta-banner-main .delivery-men {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: -10%;
+}
+
+.cta-banner-main .frame-shape {
+    position: absolute;
+    top: 20%;
+    left: 42%;
+}
+
+.cta-banner-main .title span {
+    color: #ffb936;
+}
+
+.cta-banner-main .title h2 {
+    color: white;
+}
+
+.cta-banner-main .button {
+    background-color: white;
+    color: #212121;
+}
+
+.cta-banner-main .btn a i {
+    color: #00813D;
+}
+
+.cta-banner-main .btn .button:hover::before {
+    background-color: #ffb936;
+    color: #fff;
+}
+
+/*--------------- Cta Banner css end ---------------*/
+
+/*--------------- booking css start ---------------*/
+.booking-main {
+    background-image: url(../img/banner/main-bg.jpg);
+    margin-top: -240px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    padding: 120px 0;
+}
+
+.booking-main .booking-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+    flex-wrap: wrap;
+}
+
+.booking-main .booking-inner .left {
+    width: 50%;
+}
+
+.booking-main .booking-inner .left .title h2 {
+    color: white;
+}
+
+.booking-content {
+    display: block;
+}
+
+.booking-main .booking-inner .booking-content .contact {
+    gap: 20px;
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.booking-main .booking-inner .booking-content .contact .content h5 {
+    color: white;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.booking-main .booking-inner .booking-content .contact .content h3 a {
+    font-size: 44px;
+    font-weight: 700;
+    color: #00813D;
+    line-height: 1.2;
+}
+
+.booking-main .booking-inner .right {
+    width: 41.66%;
+}
+
+.booking-main .booking-inner .right .booking-form {
+    background-image: url(../img/shape/booking-shape.png);
+    padding: 55px;
+    background-color: #00813D;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: -120px;
+}
+
+.booking-main .booking-inner .right .booking-form h4 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.booking-main .booking-inner .right .form-clt {
+    position: relative;
+}
+
+.booking-main .nice-select {
+    background-color: transparent;
+    width: unset;
+    outline: none;
+    padding: 18px 25px;
+    border: 1px solid #ffffff1a;
+    border-radius: 9px;
+}
+
+.booking-main .current {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    text-transform: capitalize;
+}
+
+.booking-main .booking-inner .right .booking-form .booking-items .form-clt input {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 18px 25px;
+    color: #fff;
+    background-color: transparent;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 500;
+    border: 1px solid #ffffff1a;
+    border-radius: 9px;
+    color-scheme: dark;
+}
+
+.booking-main .booking-inner .right .booking-form .booking-items .form-clt .icon {
+    position: absolute;
+    top: 18px;
+    right: 25px;
+    color: #fff;
+}
+
+.booking-main .booking-inner .right .booking-form .booking-items .form-clt input::placeholder {
+    color: #fff;
+}
+
+.booking-main .booking-inner .right .booking-form .booking-items .form-clt:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.booking-main .booking-inner .right .booking-form .booking-items .form-clt .button {
+    width: 100%;
+    background-color: #ffb936;
+    color: #212121;
+}
+
+.booking-main .booking-inner .right .booking-form .booking-items .form-clt .btn a {
+    font-weight: 700;
+}
+
+.booking-main .booking-inner .right .booking-form .booking-items .form-clt .button:hover::before {
+    background-color: #fff;
+}
+
+/*--------------- booking css end ---------------*/
+
+
+/*--------------- footer css start ---------------*/
+
+.footer-main {
+    display: block;
+    position: relative;
+}
+
+.footer-main .fry-shape {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    opacity: 0.3;
+}
+
+.footer-main .burger-shape {
+    position: absolute;
+    bottom: 35%;
+    left: 2%;
+    opacity: 0.3;
+}
+
+.footer-main .footer-inner {
+    position: relative;
+    z-index: 9;
+    padding: 90px 0 120px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-main .footer-inner .item {
+    display: block;
+    width: 16.66%;
+    margin-top: 30px;
+    padding: 0 12px;
+}
+
+.footer-main .footer-inner .item:first-child {
+    width: 25%;
+}
+
+.footer-main .footer-inner .item:nth-child(2) {
+    padding-left: 3rem;
+    width: 16.66%;
+}
+
+
+.footer-main .footer-inner .item:nth-child(5) {
+    width: 25%;
+    padding-left: 3rem;
+}
+
+.footer-main .footer-inner .item:nth-child(3) {
+    padding-left: 1.5rem;
+    width: 16.66%;
+}
+
+.footer-main .footer-inner .item:nth-child(4) {
+    width: 16.66%;
+}
+
+
+.footer-main .footer-inner .item .item-inner {
+    display: block;
+}
+
+.footer-main .footer-inner .item .item-inner .logo {
+    margin-bottom: 30px;
+}
+
+.footer-main .footer-inner .item .item-inner .footer-content span {
+    font-weight: 500;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.footer-main .footer-inner .item .item-inner .footer-content a {
+    font-size: 20px;
+    font-weight: 700;
+    color: #00813D;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.footer-main .footer-inner .item .item-inner .footer-content .social-icon {
+    margin-top: 40px;
+    gap: 15px;
+    position: relative;
+    z-index: 9;
+    display: flex;
+}
+
+.footer-main .footer-inner .item .item-inner .footer-content .social-icon a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+    display: block;
+    background: rgba(92, 92, 91, 0.1);
+    color: #212121;
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+    text-align: center;
+}
+
+.footer-main .footer-inner .item .item-inner .footer-content .social-icon a:hover {
+    background-color: #00813D;
+    color: #fff;
+}
+
+.footer-main .footer-inner .item .item-inner h4 {
+    text-transform: capitalize;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #212121;
+}
+
+.footer-main .footer-inner .item .item-inner ul li {
+    margin-bottom: 15px;
+}
+
+.footer-main .footer-inner .item .item-inner ul li a {
+    font-weight: 400;
+    color: #5c5c5b;
+}
+
+.footer-main .footer-inner .item .item-inner ul li a:hover {
+    color: #00813D;
+}
+
+.footer-main .footer-inner .item .item-inner .footer-address-text h6 {
+    font-weight: 400;
+    color: #5c5c5b;
+    line-height: 150%;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.footer-main .footer-inner .item .item-inner .footer-address-text h6 span {
+    color: #D12525;
+}
+
+.footer-main .footer-inner .item .item-inner .footer-address-text h5 {
+    padding: 20px 0;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: #212121;
+}
+
+.footer-main .footer-inner .item .item-inner .footer-items h5 {
+    font-weight: 400;
+    color: #5c5c5b;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.footer-main .footer-inner .item .item-inner .footer-items .app-image {
+    margin-top: 30px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-main .footer-inner .item .item-inner .footer-items .support-text {
+    margin-top: 40px;
+}
+
+.footer-main .footer-inner .item .item-inner .footer-items .support-text h5 {
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.footer-main .footer-inner .item .item-inner .footer-items .support-text h3 a {
+    font-size: 28px;
+    color: #00813D;
+    font-weight: 700;
+}
+
+.footer-main .footer-bottom {
+    padding: 35px 0;
+    background-color: #00813D;
+}
+
+.footer-bottom-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-main .footer-bottom p {
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 20px;
+}
+
+.footer-main .footer-bottom p span {
+    color: #ffb936;
+}
+
+.footer-main .footer-bottom a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    transition: all 0.3s ease
+}
+
+.footer-main .footer-bottom a:hover {
+    color: #ffb936;
+}
+
+/*--------------- footer css end ---------------*/
+
+
+
+
+
+/* ------------------------- Media quary  ------------------------- */
+
+@media (min-width:576px) {
+    .container {
+        max-width: 540px
+    }
+}
+
+@media (min-width:768px) {
+    .container {
+        max-width: 720px
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        max-width: 960px
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width:1400px) {
+    .container {
+        max-width: 1314px
+    }
+}
+
+/* ------------------------- 1399 Media quary  ------------------------- */
+@media (max-width:1399px) {
+
+
+    h1 {
+        font-size: 130px !important;
+    }
+
+    h2 {
+        font-size: 58px !important;
+    }
+
+    h3 {
+        font-size: 28px !important;
+    }
+
+    .title h2 {
+        font-size: 58px;
+    }
+
+    /* header media */
+    .header-main .top::before {
+        width: 290px;
+    }
+
+    /* banner Start */
+    .banner-main .offer-shape {
+        top: 0;
+
+    }
+
+    .banner-main h2 {
+        left: 10%;
+        font-size: 270px;
+    }
+
+    .banner-main .item .img-content {
+        max-width: 750px;
+        width: initial;
+    }
+
+    .banner-main .item h1 {
+        font-size: 130px;
+    }
+
+    /* banner End */
+
+    /* category start */
+    .category-main .main-inner .bottom .bottom-inner .item {
+        display: block;
+        width: 33.33%;
+        height: 100%;
+        padding: 0 12px;
+    }
+
+    /* category end */
+
+    /* food banner start */
+    .food-banner-main .image .right .bg-cover {
+        padding: 60px 30px;
+    }
+
+    .food-banner-main .image .right .bg-cover .pizza-image {
+        max-width: 300px;
+        bottom: 0;
+    }
+
+    .food-banner-main .image .right .bg-cover .pizza-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* food banner end */
+
+    /* brand Start */
+    .brand-main .brand-inner .top::before {
+        display: none;
+    }
+
+    .brand-main .brand-inner .bottom .item {
+        width: 20%;
+    }
+
+    /* brand end */
+
+    /* grilled-banner start */
+    .grilled-banner-main .patato-shape {
+        display: none;
+    }
+
+    .grilled-banner-main .offer-shape {
+        bottom: 30%;
+        left: 35%;
+    }
+
+    .grilled-banner-main .spicy-shape {
+        top: 5%;
+        right: 2%;
+    }
+
+    .grilled-banner-main .item h3 {
+        margin-top: 0;
+    }
+
+    .grilled-banner-main .item h3 a {
+        font-size: 28px;
+    }
+
+    /* grilled-banner end */
+
+    /*food-combo start */
+    .food-combo-main .drink-shape {
+        display: none;
+    }
+
+    .food-combo-main .food-combo-inner .item .item-inner .combo-img {
+        width: 630px;
+        height: 780px;
+    }
+
+    .food-combo-main .food-combo-inner .item .item-inner .combo-img .pizza-text {
+        top: 20%;
+        left: 10px;
+    }
+
+    .food-combo-main .food-combo-inner .item .item-inner .combo-img .pizza-img {
+        top: 45%;
+        left: -10%;
+    }
+
+    .food-combo-main .food-combo-inner .item .item-inner .combo-img .offer-shape {
+        top: 0%;
+        left: 30%;
+    }
+
+    /*food-combo end */
+
+    /*offer start*/
+
+    .offer-main .offer-inner .item .item-inner .burger-img {
+        width: 350px;
+        bottom: -12px;
+        right: 0;
+    }
+
+    .offer-main .offer-inner .item .item-inner .burger-img img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .offer-main .offer-inner .offer-img {
+        top: 15%;
+        left: 58%;
+    }
+
+    .offer-main .offer-inner .rooler-box {
+        width: 300px;
+    }
+
+    .offer-main .offer-inner .rooler-box img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /*offer end*/
+
+    /*kfc-banner start*/
+    .kfc-banner-main .kfc-banner-inner .item:first-child .item-inner {
+        width: 700px;
+        height: 700px;
+    }
+
+    .kfc-banner-main .kfc-banner-inner .item:first-child .item-inner .kfc-img {
+        bottom: 0px;
+        width: 600px;
+    }
+
+    /*kfc-banner end*/
+    /* cta-banner start */
+    .cta-banner-main {
+        padding: 100px 0;
+    }
+
+    /* cta-banner end */
+
+    /* booking start */
+    .booking-main .booking-inner .booking-content .contact .content h3 a {
+        font-size: 28px;
+    }
+
+    /* booking-end */
+
+}
+
+
+/* ------------------------- 1199 Media quary  ------------------------- */
+@media (max-width:1199px) {
+
+    h1 {
+        font-size: 110px !important;
+    }
+
+    .title h2 {
+        font-size: 54px !important;
+    }
+
+    /* header media */
+    .header-main .top::before {
+        width: 270px;
+    }
+
+    .header-main .bottom .bottom-inner .contact .add-cart {
+        display: none;
+    }
+
+    /* banner Start */
+    .banner-main {
+        padding: 100px 0;
+    }
+
+    .banner-main .chilii-shape {
+        display: none;
+    }
+
+    .banner-main .fire-shape {
+        display: none;
+    }
+
+    .banner-main .back-title {
+        display: none;
+    }
+
+    .banner-main .item:first-child {
+        width: 58.66%;
+    }
+
+    .banner-main .item:last-child {
+        width: 41.33%;
+        margin-top: 0px;
+    }
+
+    /* banner End */
+
+    /* category start */
+    .category-main {
+        padding: 100px 0;
+    }
+
+    .category-main .main-inner .bottom .bottom-inner .item {
+        width: 33.33%;
+    }
+
+    /* category end */
+
+    /* food banner start */
+    .food-banner-main .image .left {
+        width: 100%;
+    }
+
+    .food-banner-main .image .bg-cover .offer-content {
+        padding: 100px 50px;
+    }
+
+    .food-banner-main .image .bg-cover .offer-image {
+        bottom: 0px;
+        left: 190px;
+    }
+
+    .food-banner-main .image .right {
+        margin-top: 3rem;
+        width: 100%;
+    }
+
+    .food-banner-main .image .right .bg-cover {
+        padding: 60px 50px;
+    }
+
+    .food-banner-main .image .right .bg-cover .pizza-image {
+        max-width: initial;
+        bottom: -40px;
+    }
+
+    /* food banner End */
+
+    /* brand start */
+    .brand-main {
+        padding: 100px 0;
+    }
+
+    /* brand end */
+    /* grilled-banner start */
+    .grilled-banner-main .offer-shape {
+        display: none;
+    }
+
+    .grilled-banner-main .spicy-shape {
+        top: 65%;
+        right: 5%;
+    }
+
+    .grilled-banner-main .item h2 {
+        font-size: 66px;
+    }
+
+    .grilled-banner-main .item h3 a {
+        font-size: 40px;
+    }
+
+    /* grilled-banner end */
+
+    /* food-category start */
+    .food-category-main {
+        padding: 100px 0;
+    }
+
+    .food-category-main .food-category-inner .bottom .item {
+        width: 50%;
+    }
+
+    /* food-category end */
+
+    /*food-combo start */
+    .food-combo-main {
+        padding: 100px 0;
+    }
+
+    .food-combo-main .food-combo-inner:first-child .item {
+        padding-bottom: 180px;
+    }
+
+    .food-combo-main .food-combo-inner .item {
+        width: 100%;
+    }
+
+    .food-combo-main .food-combo-inner .item .item-inner .title h2 {
+        font-size: 54px;
+    }
+
+    .food-combo-main .food-combo-inner .item .item-inner .combo-img {
+        width: 1180px;
+        height: 410px;
+        left: 0;
+        bottom: 0;
+    }
+
+    .food-combo-main .food-combo-inner .item .item-inner .combo-img .pizza-text {
+        top: 15%;
+        left: 10px;
+    }
+
+    .food-combo-main .food-combo-inner .item .item-inner .combo-img .pizza-img {
+        top: 25%;
+        left: 20%;
+        max-width: 625px;
+    }
+
+    /*food-combo end */
+
+    /*marquee start */
+    .food-combo-main {
+        padding-bottom: 100px;
+    }
+
+    /*marquee end */
+
+    /*about start*/
+    .about-main {
+        padding: 100px;
+    }
+
+    .about-main .about-inner .right .about-content .icon-area {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    /*about end*/
+
+    /*offer start*/
+    .offer-main {
+        padding-bottom: 100px;
+    }
+
+    .offer-main .offer-inner {
+        justify-content: center;
+    }
+
+    .offer-main .offer-inner .item:first-child {
+        width: 75%;
+    }
+
+    .offer-main .offer-inner .item:last-child {
+        width: 75%;
+        margin-top: 48px;
+    }
+
+    .offer-main .offer-inner .item .item-inner .text-content h2 {
+        font-size: 54px;
+    }
+
+    .offer-main .offer-inner .item .item-inner .burger-img {
+        width: 300px;
+        right: 50px;
+    }
+
+    .offer-main .offer-inner .item .item-inner .text-shape {
+        top: 25px;
+    }
+
+    .offer-main .offer-inner .offer-img {
+        top: 30%;
+        left: 43%;
+    }
+
+    .offer-main .offer-inner .rooler-box {
+        width: initial;
+    }
+
+    /*offer end*/
+
+    /*kfc-banner start*/
+    .kfc-banner-main .kfc-banner-inner .item:first-child .item-inner {
+        width: 600px;
+        height: 730px;
+    }
+
+    .kfc-banner-main .kfc-banner-inner .item:first-child .item-inner .kfc-img {
+        width: 500px;
+        bottom: 10%;
+    }
+
+    /*kfc-banner end*/
+    /*testimonial start*/
+    .testimonial-main {
+        padding-top: 100px;
+    }
+
+    /*testimonial end*/
+    /* cta-banner start */
+    .cta-banner-main {
+        padding: 100px 0;
+    }
+
+    .cta-banner-inner {
+        padding: 120px 60px;
+    }
+
+    .cta-banner-main .delivery-men {
+        right: -35px;
+    }
+
+    /* cta-banner end */
+
+    /* footer start */
+    .footer-main .footer-inner {
+        padding: 60px 0 90px;
+    }
+
+    .footer-main .footer-inner .item:nth-child(2),
+    .footer-main .footer-inner .item:nth-child(3),
+    .footer-main .footer-inner .item:nth-child(4) {
+        width: 25%;
+    }
+
+    .footer-main .footer-inner .item:nth-child(5) {
+        padding-left: 12px;
+        width: 33.33%;
+    }
+    .footer-main .fry-shape{
+        display: none;
+    }
+    .footer-main .burger-shape{
+        display: none;
+    }
+
+
+    /* footer end */
+
+}
+
+
+/* ------------------------- 991 Media quary  ------------------------- */
+@media (max-width:991px) {
+    h3 {
+        font-size: 24px !important;
+    }
+
+    .title h2 {
+        font-size: 42px !important;
+    }
+
+    .button {
+        padding: 20px 36px;
+        font-size: 16px;
+    }
+
+    /* header media */
+    .header-main .top {
+        display: none;
+    }
+
+    .header-main .bottom .menu {
+        display: none;
+    }
+
+    /* banner Start */
+    .banner-main {
+        padding: 80px 0;
+    }
+
+    .banner-main .offer-shape {
+        top: 280px;
+        left: 5%;
+    }
+
+    .banner-main .offer-shape img {
+        width: 70%;
+    }
+
+    .banner-main .banner-inner .item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .banner-main .item h1 {
+        font-size: 72px;
+    }
+
+    .banner-main .item h1 span::before {
+        display: none;
+    }
+
+    .banner-main .item:last-child {
+        margin-top: 48px;
+    }
+
+    .banner-main .item .img-content {
+        text-align: center;
+    }
+
+    .banner-main .item .img-content img {
+        width: 75%;
+    }
+
+    /* banner End */
+
+    /* category start */
+    .category-main {
+        padding: 80px 0;
+    }
+
+    .category-main .main-inner .bottom .bottom-inner .item {
+        width: 50%;
+    }
+
+    /* category end */
+    /* brand Start */
+    .brand-main {
+        padding: 80px 0;
+    }
+
+    .brand-main .brand-inner .bottom .item {
+        width: 25%;
+    }
+
+    /* brand end */
+
+    /* grilled-banner start */
+    .grilled-banner-main {
+        padding: 80px 0;
+    }
+
+    .grilled-banner-main .text-shape {
+        display: none;
+    }
+
+    .grilled-banner-main .spicy-shape img {
+        width: 60%;
+    }
+
+    .grilled-banner-main .item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .grilled-banner-main .item h2 {
+        font-size: 56px;
+    }
+
+    .grilled-banner-main .item h3 a {
+        font-size: 36px;
+    }
+
+    /* grilled-banner end */
+    /* food-category start */
+    .food-category-main {
+        padding: 80px 0;
+    }
+
+    /* food-category end */
+
+    /* food-combo start */
+    .food-combo-main {
+        padding: 80px 0;
+    }
+
+    .food-combo-main .food-combo-inner .item .item-inner .title h2 {
+        font-size: 42px;
+    }
+
+    .food-combo-main .food-combo-inner .item .item-inner .combo-img {
+        width: 990px;
+    }
+
+    .food-combo-main .food-combo-inner .item .item-inner .combo-img .pizza-img {
+        max-width: 500px;
+        left: 120px;
+        top: 40%;
+    }
+
+    .food-combo-main .food-combo-inner .item .item-inner .combo-img .offer-shape {
+        top: 10%;
+        left: 40%;
+    }
+
+    /* food-combo end */
+
+    /*marquee start */
+    .text-slider-main {
+        padding-bottom: 80px;
+    }
+
+    /*marquee end */
+
+    /* icon start */
+    .icon-main .icon-inner .icon-content .item {
+        width: 50%;
+        text-align: center;
+    }
+
+    /* icon end */
+
+    /*about start*/
+    .about-main {
+        padding: 80px;
+    }
+
+    .about-main .about-inner .left .about-img img {
+        width: 70%;
+    }
+
+    .about-main .about-inner .right .about-content .icon-area {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .about-main .about-inner .left {
+        width: 100%;
+    }
+
+    .about-main .about-inner .right {
+        width: 100%;
+        margin-top: 48px;
+    }
+
+    .about-main .about-inner .left .about-img .since-text h3 {
+        font-size: 24px;
+    }
+
+    /*about end*/
+
+    /* offer start */
+    .offer-main {
+        padding-bottom: 80px;
+    }
+
+    .offer-main .offer-inner .item:first-child {
+        width: 100%;
+    }
+
+    .offer-main .offer-inner .item:last-child {
+        width: 100%;
+    }
+
+    .offer-main .offer-inner .item .item-inner .text-content h3 {
+        font-size: 24px;
+    }
+
+    .offer-main .offer-inner .item .item-inner .text-content h2 {
+        font-size: 42px;
+    }
+
+    /*offer end*/
+
+    /*kfc-banner start*/
+    .kfc-banner-main .kfc-banner-inner .item:first-child .item-inner {
+        width: 1000px;
+        height: 500px;
+    }
+
+    .kfc-banner-main .kfc-banner-inner .item:first-child .item-inner .kfc-img {
+        left: 50px;
+        bottom: 0;
+    }
+
+    .kfc-banner-main .kfc-banner-inner .item {
+        width: 100%;
+    }
+
+    .kfc-banner-main .kfc-banner-inner .item:last-child .item-inner .kfc-content {
+        margin-top: 430px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /*kfc-banner end*/
+
+    .testimonial-main {
+        padding-top: 80px;
+    }
+
+    .testimonial-main .burger-shape {
+        display: none;
+    }
+
+    .testimonial-main .pizza-shape {
+        display: none;
+    }
+
+    .testimonial-main .fry-shape {
+        display: none;
+    }
+
+    /*testimonial end*/
+
+    /* cta-banner start */
+    .cta-banner-main {
+        padding: 80px 0;
+    }
+
+    .cta-banner-main .delivery-men {
+        width: 320px;
+        top: 30%;
+    }
+
+    .cta-banner-main .delivery-men img {
+        width: 100%;
+    }
+
+    /* cta-banner end */
+
+    /* booking start */
+    .booking-main .booking-inner {
+        margin-top: 80px
+    }
+
+    .booking-main .booking-content {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .booking-main .booking-content .title {
+        text-align: center;
+    }
+
+    .booking-main .booking-inner .booking-content .contact {
+        justify-content: center;
+    }
+
+    .booking-main .booking-inner .left,
+    .booking-main .booking-inner .right {
+        width: 100%;
+    }
+
+    .booking-main .booking-inner .right .booking-form {
+        margin-top: 48px;
+    }
+
+    .booking-main .booking-inner .booking-content .contact .content h3 a {
+        font-size: 24px;
+    }
+
+    /* booking-end */
+
+    /* Footer Start */
+    .footer-main .footer-inner {
+        padding: 50px 0 70px;
+    }
+
+    .footer-main .footer-inner .item:first-child,
+    .footer-main .footer-inner .item:nth-child(4),
+    .footer-main .footer-inner .item:nth-child(5) {
+        width: 50%;
+    }
+
+}
+
+
+/* ------------------------- 767 Media quary  ------------------------- */
+@media (max-width:767px) {
+    .button {
+        padding: 18px 32px;
+        font-size: 14px;
+        margin-top: 24px;
+    }
+
+    .title {
+        margin-bottom: 0;
+    }
+
+    /* header media */
+    .header-main .bottom .bottom-inner .contact .contact-btn {
+        display: none;
+    }
+
+    /* banner Start */
+    .banner-main {
+        padding: 80px 0;
+    }
+
+    .banner-main .chilii-shape-2 {
+        display: none;
+    }
+
+    .banner-main .item p {
+        margin-bottom: 5px;
+    }
+
+    .banner-main .item .img-content {
+        width: 380px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /* banner End */
+    /* category start */
+    .category-main .main-inner .bottom .bottom-inner .item {
+        width: 100%;
+    }
+
+    .category-main .main-inner .bottom .item .item-inner .text-content::before {
+        left: 44%;
+    }
+
+    /* category end */
+
+
+    /* food category start */
+    .food-banner-main .image .bg-cover .offer-content {
+        padding: 90px 30px;
+    }
+
+    .food-banner-main .image .bg-cover .offer-image {
+        display: none;
+    }
+
+    .food-banner-main .image .right .bg-cover {
+        padding: 60px 30px;
+        background-size: 300%;
+    }
+
+    .food-banner-main .image .right .bg-cover .pizza-text-2 {
+        top: 30px;
+    }
+
+    .food-banner-main .image .right .bg-cover .pizza-image {
+        width: 270px;
+        bottom: -10px;
+    }
+
+    /* food category end */
+
+    /* brand-start */
+    .brand-main .brand-inner .top {
+        text-align: center;
+    }
+
+    .brand-main .brand-inner .bottom .item {
+        width: 33.33%;
+    }
+
+    /*brand end*/
+
+    /* food-category start */
+    .food-category-main {
+        padding: 80px 0;
+    }
+
+    .food-category-main .food-category-inner .bottom .item {
+        width: 100%;
+    }
+
+    /* food-category end */
+
+    /* food-combo start */
+
+    .food-combo-main .food-combo-inner .item .item-inner .title {
+        margin-bottom: 0;
+    }
+
+    .food-combo-main .food-combo-inner .item .item-inner .combo-img {
+        width: 770px;
+        height: 400px;
+    }
+
+    .food-combo-main .food-combo-inner .item .item-inner .combo-img .pizza-text {
+        top: 3%;
+    }
+
+    .food-combo-main .food-combo-inner .item .item-inner .combo-img .pizza-img {
+        left: 50px;
+        top: 35%;
+    }
+
+    .food-combo-main .food-combo-inner .item .item-inner .combo-img .offer-shape {
+        top: 10%;
+        left: 40%;
+    }
+
+    /* food-combo end */
+
+    /* icon start */
+
+    .icon-main .icon-inner .icon-content .item {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* icon end */
+
+    /*about start*/
+    .about-main .about-inner .right .about-content p {
+        margin-top: 10px;
+    }
+
+    /*about end*/
+
+    /* offer start */
+    .offer-main .offer-inner .item .item-inner .text-content {
+        width: 280px;
+        padding: 100px 30px;
+    }
+
+    .offer-main .offer-inner .item .item-inner .burger-img {
+        width: 250px;
+        bottom: 0;
+        right: 0;
+    }
+
+    .offer-main .offer-inner .item .item-inner .burger-text {
+        left: 35%;
+    }
+
+    .offer-main .offer-inner .offer-img {
+        top: 15%;
+        left: 60%;
+    }
+
+    /*offer end*/
+
+    /*kfc-banner start*/
+    .kfc-banner-main .kfc-banner-inner .item:first-child .item-inner .offer-shape {
+        top: 12%;
+        left: 25%;
+    }
+
+    /*kfc-banner end*/
+    /* cta-banner start */
+    .cta-banner-inner {
+        padding: 70px 50px;
+        text-align: center;
+    }
+
+    .cta-banner-inner .title {
+        text-align: center;
+    }
+
+    .cta-banner-main .delivery-men {
+        display: none;
+    }
+
+    .cta-banner-main .arrow-shape {
+        display: none;
+    }
+
+    .cta-banner-main .frame-shape {
+        display: none;
+    }
+
+    /* cta-banner end */
+    /* Footer Start */
+    .footer-main .footer-inner .item {
+        width: 50% !important;
+        padding-left: 12px !important;
+        padding-right: 12px;
+    }
+
+    .footer-bottom-inner {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center !important;
+    }
+
+    /* Footer End */
+}
+
+
+
+
+
+/* ------------------------- 575 Media quary  ------------------------- */
+@media (max-width:575px) {
+    .title h2 {
+        font-size: 32px !important;
+    }
+
+    /* banner Start */
+    .banner-main .chilii-shape-3 {
+        z-index: -1;
+        opacity: 0.5;
+    }
+
+    .banner-main .offer-shape {
+        left: -3%;
+    }
+
+    .banner-main .offer-shape img {
+        width: 50%;
+    }
+
+    .banner-main .item h1 {
+        font-size: 52px;
+    }
+
+    /* banner End */
+
+    /*brand start*/
+    .brand-main .brand-inner .bottom {
+        text-align: center;
+    }
+
+    /*brand end*/
+
+    /* grilled-banner start */
+    .grilled-banner-main .item h4 {
+        font-size: 22px;
+    }
+
+    .grilled-banner-main .item h2 {
+        font-size: 46px;
+    }
+
+    .grilled-banner-main .item h3 a {
+        font-size: 28px;
+    }
+
+    .grilled-banner-main .item img {
+        margin-top: 48px;
+    }
+
+    /* grilled-banner end */
+    /* food-combo start */
+    .food-combo-main .food-combo-inner .item .item-inner .title h2 {
+        font-size: 32px;
+    }
+
+    .food-combo-main .food-combo-inner .item .item-inner .combo-img {
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    .food-combo-main .food-combo-inner .item .item-inner .combo-img .pizza-text {
+        display: none;
+    }
+
+    .food-combo-main .food-combo-inner .item .item-inner .combo-img .pizza-img {
+        top: 37%;
+        left: -6%;
+    }
+
+    .food-combo-main .food-combo-inner .item .item-inner .combo-img .offer-shape {
+        left: 8%;
+    }
+
+    /* food-combo end */
+    /*marquee start */
+    .text-slider-inner,
+    .text-slider-main .text-slider {
+        font-size: 50px;
+        height: 70px;
+    }
+
+    /*marquee end */
+
+    /* offer start */
+    .offer-main .offer-inner .item .item-inner .text-content {
+        width: 250px;
+        padding: 70px 20px;
+    }
+
+    .offer-main .offer-inner .item .item-inner .text-content h2 {
+        font-size: 32px;
+    }
+
+    .offer-main .offer-inner .item .item-inner .text-content h4 a {
+        font-size: 36px;
+    }
+
+    .offer-main .offer-inner .item .item-inner .burger-text {
+        display: none;
+    }
+
+    .offer-main .offer-inner .item .item-inner .text-shape {
+        display: none;
+    }
+
+    .offer-main .offer-inner .offer-content h3 {
+        font-size: 36px;
+    }
+
+    .offer-main .offer-inner .rooler-box {
+        width: 250px;
+        right: 0;
+        bottom: 0;
+    }
+
+    /*offer end*/
+
+    /*kfc-banner start*/
+    .kfc-banner-main .kfc-banner-inner .item:first-child .item-inner .offer-shape {
+        top: 10%;
+        left: 20%;
+    }
+
+    .kfc-banner-main .kfc-banner-inner .item:first-child .item-inner .kfc-img {
+        width: 400px;
+        bottom: 0;
+    }
+
+    .kfc-banner-main .kfc-banner-inner .item:last-child .item-inner .kfc-content {
+        margin-top: 320px;
+    }
+
+    .kfc-banner-main .kfc-banner-inner .item:first-child .item-inner {
+        width: 800px;
+        height: 400px;
+        bottom: 0;
+    }
+
+    /*kfc-banner end*/
+
+    /* cta-banner start */
+    .cta-banner-inner {
+        padding: 60px 40px;
+    }
+
+    /* cta-banner end */
+
+    /* booking start */
+    /*.booking-main .booking-inner .booking-content .contact .icon img {
+        width: 56px;
+    }*/
+
+    /* booking end */
+
+    /* Footer Start */
+    .footer-main .footer-inner .item {
+        width: 100% !important;
+    }
+
+    /* Footer End */
+
+}
